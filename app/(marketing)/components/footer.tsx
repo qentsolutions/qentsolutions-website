@@ -15,14 +15,14 @@ const Footer = () => {
             >
               <Image
                 src="/logo.svg"
-                alt={`ByzPylot logo`}
+                alt={`qentsolutions logo`}
                 priority={true}
                 className="w-6 h-6"
                 width={24}
                 height={24}
               />
               <strong className="font-extrabold tracking-tight text-base md:text-lg">
-                ByzPylot
+                Qent Solutions
               </strong>
             </Link>
 

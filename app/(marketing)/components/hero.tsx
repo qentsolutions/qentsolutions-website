@@ -1,22 +1,22 @@
 "use client";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import TestimonialsAvatars from "./testimonials-avatars";
-import { ArrowRight, Medal } from "lucide-react";
+import { Medal } from "lucide-react";
 import { PlaceholdersAndVanishInput } from "./placeholders-and-vanish-input";
 
 export default function Hero() {
   const placeholders = [
-    "What's the first rule of Fight Club?",
-    "Who is Tyler Durden?",
-    "Where is Andrew Laeddis Hiding?",
-    "Write a Javascript method to reverse a string",
-    "How to assemble your own PC?",
+    "What challenges do you face in your business?",
+    "How can technology streamline your processes?",
+    "What features do you need in a custom software?",
+    "Looking for a modern website design?",
+    "How can we help you grow your business?",
   ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     console.log(e.target.value);
   };
+
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("submitted");
@@ -27,26 +27,25 @@ export default function Hero() {
       <div className="flex flex-col gap-4 md:gap-8 lg:gap-8 items-center justify-center text-center lg:text-left lg:items-start">
         <div className="flex items-center border shadow-sm py-2 px-4 bg-amber-100 text-amber-700 rounded-full uppercase text-sm">
           <Medal className="h-6 w-6 mr-2" />
-          Your Ultimate CRM Solution
+          Your Trusted Technology Partner
         </div>
         <h1 className="font-extrabold text-4xl lg:text-6xl text-gray-800 md:-mb-8">
-          Transform Your Business Workflow in Days,
-          <span className=" ml-2 text-3xl md:text-5xl bg-gradient-to-r mt-4 from-blue-400 to-indigo-600 text-white px-4 rounded-md w-fit font-bold">
-            not weeks.
+          Elevate Your Business with
+          <span className="ml-2 text-3xl md:text-5xl bg-gradient-to-r mt-4 from-blue-400 to-indigo-600 text-white px-4 rounded-md w-fit font-bold">
+            Tailored Solutions
           </span>
         </h1>
 
         <p className="text-lg opacity-80 leading-relaxed mt-4 md:mt-12">
-          The powerful CRM solution you need, to streamlines your core business
-          activities. Connect the dots between sales, service, and support with
-          a suite that adapts to your needs.
+          At Qent Solutions, we craft customized software and websites designed to meet your unique business challenges.
+          Let us connect the dots between innovation and efficiency.
         </p>
         <PlaceholdersAndVanishInput
           placeholders={placeholders}
           onChange={handleChange}
           onSubmit={onSubmit}
         />
-        <TestimonialsAvatars priority={true} />
+        <TestimonialsAvatars />
       </div>
       <div className="lg:w-full md:mt-8 lg:mt-0">
         <div className="w-full lg:max-w-2xl mx-auto">

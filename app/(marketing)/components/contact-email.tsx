@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import { AnimatedSubscribeButton } from "./animated-subscribe-button";
 import { CheckIcon, ChevronRightIcon } from "lucide-react";
 

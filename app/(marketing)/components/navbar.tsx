@@ -6,7 +6,6 @@ import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
@@ -37,31 +36,11 @@ export const Navbar = () => {
     },
   ];
 
-  const product = [
-    {
-      name: "Blog",
-      description: "Get a better understanding of your traffic",
-      href: "#",
-      icon: BookOpen,
-      color: "bg-orange-100/50",
-      hoverColor: "hover:bg-orange-100/50",
-      iconColor: "text-orange-600",
-    },
-    {
-      name: "Engagement",
-      description: "Speak directly to your customers",
-      href: "#",
-      icon: TextCursor,
-      color: "bg-sky-100/50",
-      hoverColor: "hover:bg-sky-100/50",
-      iconColor: "text-blue-600",
-    },
-  ];
 
   return (
     <div className="fixed z-50 top-0 w-full h-14 px-4  bg-white flex items-center">
       <Link href="/">
-        <img src="/logo.svg" alt="image" className="md:hidden" />
+        <Image src="/logo.svg" width={30} height={30} alt="image" className="md:hidden" />
       </Link>
       <div className="md:max-w-screen-2xl mx-auto flex items-center w-full justify-between">
         <div className="flex items-center">

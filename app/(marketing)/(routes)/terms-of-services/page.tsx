@@ -38,11 +38,11 @@ const TOS = () => {
 
 Last Updated: April 29, 2024
 
-Welcome to Byzpylot! These Terms of Service ("Terms") govern your use of the website https://byzpylot.com (the "Site") and the services provided by Byzpylot ("Services"). By accessing or using our Services, you agree to be bound by these Terms.
+Welcome to qentsolutions! These Terms of Service ("Terms") govern your use of the website https://qentsolutions.com (the "Site") and the services provided by qentsolutions ("Services"). By accessing or using our Services, you agree to be bound by these Terms.
 
 1. Description of Services
 
-Byzpylot is an all-in-one CRM platform designed to streamline your sales process and deepen customer relationships with ease. Discover the power of efficiency and insight in every interaction.
+qentsolutions is an all-in-one CRM platform designed to streamline your sales process and deepen customer relationships with ease. Discover the power of efficiency and insight in every interaction.
 
 2. Ownership and Data Collection
 
@@ -66,7 +66,7 @@ We may update these Terms from time to time. Users will be notified of any chang
 
 Contact Us
 
-If you have any questions about these Terms, please contact us at william@byzpylot.com.`}
+If you have any questions about these Terms, please contact us at william@qentsolutions.com.`}
         </pre>
       </div>
     </main>

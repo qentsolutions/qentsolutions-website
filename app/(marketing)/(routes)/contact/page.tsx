@@ -75,8 +75,8 @@ export default function Contact() {
       } else {
         toast.error("Failed to send message.");
       }
-    } catch (error) {
-      toast.error("Failed to send message.");
+    } catch (e) {
+      toast.error(`Failed to send message. ${e}`);
     }
   };
 

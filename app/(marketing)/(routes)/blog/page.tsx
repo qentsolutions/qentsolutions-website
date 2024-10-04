@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const Blog = () => {
   const posts = [
@@ -113,7 +114,7 @@ const Blog = () => {
           The content you need to become
           <br /> a{" "}
           <span className=" ml-2 text-3xl md:text-5xl bg-gradient-to-r mt-4 from-blue-400 to-indigo-600 text-white px-4 rounded-md w-fit font-bold">
-            ByzPylot Expert
+            Qent Solutions Expert
           </span>
         </p>
         <p className="mt-8 text-2xl">
@@ -180,7 +181,7 @@ const Blog = () => {
                   </p>
                 </div>
                 <div className="relative mt-8 flex items-center gap-x-4">
-                  <img
+                  <Image
                     src={post.author.imageUrl}
                     alt=""
                     className="h-10 w-10 rounded-full bg-gray-50"

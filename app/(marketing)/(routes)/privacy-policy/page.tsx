@@ -36,7 +36,7 @@ const PrivacyPolicy = () => {
         >
           {`Last Updated: April 29, 2024
 
-Welcome to ByzPylot! This Privacy Policy explains how we collect, use, and disclose information about you when you use our website https://byzpylot.com (the "Site") and the services provided by ByzPylot (the "Services").
+Welcome to Qent Solutions! This Privacy Policy explains how we collect, use, and disclose information about you when you use our website https://qentsolutions.com (the "Site") and the services provided by qentsolutions (the "Services").
 
 1. Information We Collect
 
@@ -54,7 +54,7 @@ We do not share the data we collect with any other parties.
 
 4. Children's Privacy
 
-We do not knowingly collect any data from children under the age of 13. If you believe that we may have collected personal information from a child under the age of 13, please contact us at william@byzpylot.com.
+We do not knowingly collect any data from children under the age of 13. If you believe that we may have collected personal information from a child under the age of 13, please contact us at william@qentsolutions.com.
 
 5. Updates to the Privacy Policy
 
@@ -62,7 +62,7 @@ We may update this Privacy Policy from time to time. Users will be notified of a
 
 Contact Us
 
-If you have any questions about this Privacy Policy, please contact us at william@byzpylot.com.`}
+If you have any questions about this Privacy Policy, please contact us at william@qentsolutions.com.`}
         </pre>
       </div>
     </main>
