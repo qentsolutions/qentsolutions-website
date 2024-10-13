@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { Logo } from "@/app/(marketing)/components/logo";
-import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -38,7 +37,7 @@ export const Navbar = () => {
 
 
   return (
-    <div className="fixed z-50 top-0 w-full h-14 px-4  bg-white flex items-center">
+    <div className="fixed z-50 w-2/3 top-0 mt-6 h-14 px-4 border-gray-100 border bg-white flex items-center shadow-sm rounded-full">
       <Link href="/">
         <Image src="/logo.svg" width={30} height={30} alt="image" className="md:hidden" />
       </Link>
@@ -108,13 +107,59 @@ export const Navbar = () => {
             </NavigationMenu>
                         */}
 
-            <Link href="/pricing" className="ml-12">
-              Pricing
-            </Link>
+
+
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-black bg-transparent px-2 font-normal mx-4">
+                  <NavigationMenuTrigger className="text-black bg-transparent ml-14 font-normal">
+                    Solutions
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className=" p-2 md:w-[400px] ">
+                      <li className="flex flex-col">
+                        {resources.map((item) => (
+                          <div
+                            key={item.name}
+                            className={`group relative flex gap-x-6 rounded-lg p-4 ${item.hoverColor}`}
+                          >
+                            <div
+                              className={`mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white  ${item.color}`}
+                            >
+                              <item.icon
+                                className={`h-6 w-6 ${item.iconColor}`}
+                                aria-hidden="true"
+                              />
+                            </div>
+                            <div>
+                              <a
+                                href={item.href}
+                                className="font-semibold text-gray-900"
+                              >
+                                {item.name}
+                                <span className="absolute inset-0" />
+                              </a>
+                              <p className="text-gray-600">
+                                {item.description}
+                              </p>
+                            </div>
+                          </div>
+                        ))}
+                      </li>
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+
+            <Link href="/pricing" className="mx-4">
+              Pricing
+            </Link>
+
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-black bg-transparent font-normal mr-2">
                     Resources
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -157,13 +202,8 @@ export const Navbar = () => {
             <Link href="/contact">Contact</Link>
           </div>
 
-          <div className="flex items-center space-x-4">
-            <Link href="/dashboard">
-              <Button size="sm" className="bg-blue-600">
-                Get started
-              </Button>
-            </Link>
-          </div>
+          <button className="bg-gradient-to-r from-blue-400 to-indigo-600 text-white px-8 py-2 rounded-full mr-2">Get in touch</button>
+
         </div>
       </div>
     </div>
