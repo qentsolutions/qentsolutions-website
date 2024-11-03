@@ -183,7 +183,7 @@ const Blog = () => {
                 <div className="relative mt-8 flex items-center gap-x-4">
                   <Image
                     src={post.author.imageUrl}
-                    alt=""
+                    alt="Image"
                     className="h-10 w-10 rounded-full bg-gray-50"
                   />
                   <div className="text-sm leading-6">
