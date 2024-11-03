@@ -56,7 +56,7 @@ const Pricing = () => {
             </p>
           </div>
         </div>
-        <div className="flex justify-center space-x-6 py-12 flex-col lg:flex-row ml-2 lg:ml-0">
+        <div className="flex justify-center space-x-6 pt-12 flex-col lg:flex-row ml-2 lg:ml-0">
           <div className="bg-white text-black rounded-lg shadow-sm border-2 border-gray-100 p-8 w-80 ml-6 lg:ml-0">
             <h2 className="text-2xl font-semibold">Starter</h2>
             <div className="text-4xl font-bold mt-4">
@@ -362,39 +362,8 @@ const Pricing = () => {
             </ul>
           </div>
         </div>
-        <div className="flex items-center flex-col justify-center">
-          <p className="text-2xl font-bold mb-4 text-center">
-            +100 000 users,{" "}
-            <span className="text-blue-600"> save time everyday</span>
-          </p>
-          <AvatarCircles
-            avatarUrls={[
-              "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
-              "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
-              "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
-              "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
-            ]}
-            numPeople={99}
-          />
-          <p className="mt-2 text-gray-600">Reviewer on Google and G2</p>
-          <div className="flex items-center justify-around mt-4">
-            <Image
-              src="/google-reviewer.png"
-              alt="Google"
-              className="mr-8"
-              width={120}
-              height={120}
-            />
-            <Image
-              src="/g2-reviewer.png"
-              alt="G2"
-              className="ml-8"
-              width={120}
-              height={120}
-            />
-          </div>
-        </div>
-        <div className="lg:flex flex-col justify-center px-10 pt-4 pb-12 lg:mx-32 2xl:mx-64 hidden max-md:px-5">
+
+        <div className="lg:flex flex-col justify-center px-10 pb-12 lg:mx-32 2xl:mx-64 hidden max-md:px-5">
           <div className="mt-28 border-t border-solid border-gray-900 border-opacity-10 max-md:pr-5 max-md:mt-10 max-md:max-w-full">
             <div className="flex gap-5 max-md:flex-col max-md:gap-0">
               <div className="flex flex-col w-[24%] max-md:ml-0 max-md:w-full">
@@ -596,6 +565,39 @@ const Pricing = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div className="flex items-center flex-col justify-center mt-8">
+          <p className="text-2xl font-bold mb-4 text-center">
+            +100 000 users,{" "}
+            <span className="text-blue-600"> save time everyday</span>
+          </p>
+          <AvatarCircles
+            avatarUrls={[
+              "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+              "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+              "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+              "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+            ]}
+            numPeople={99}
+          />
+          <p className="mt-2 text-gray-600">Reviewer on Google and G2</p>
+          <div className="flex items-center justify-around mt-4">
+            <Image
+              src="/google-reviewer.png"
+              alt="Google"
+              className="mr-8"
+              width={120}
+              height={120}
+            />
+            <Image
+              src="/g2-reviewer.png"
+              alt="G2"
+              className="ml-8"
+              width={120}
+              height={120}
+            />
           </div>
         </div>
 

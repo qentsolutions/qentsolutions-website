@@ -37,7 +37,7 @@ export const Navbar = () => {
 
 
   return (
-    <div className="fixed z-50 w-2/3 top-0 mt-6 h-14 px-4 border-gray-100 border bg-white flex items-center shadow-sm rounded-full">
+    <div className="fixed z-50 w-11/12 top-0 mt-6 h-20 px-4 border-gray-100 border bg-white flex items-center shadow-sm rounded-full">
       <Link href="/">
         <Image src="/logo.svg" width={30} height={30} alt="image" className="md:hidden" />
       </Link>
