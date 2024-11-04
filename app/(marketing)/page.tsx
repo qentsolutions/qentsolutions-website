@@ -3,7 +3,6 @@ import Problem from "./components/problem";
 import FeaturesAccordion from "./components/feature-resume";
 import FeatureDesign from "./components/feature-design";
 import CTA from "./components/cta";
-import Stats from "./components/stats";
 import { FeatureCarousel } from "./components/feature-carousel";
 
 const MarketingPage = () => {

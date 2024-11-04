@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { Field, Label, Switch } from "@headlessui/react";
 import { toast } from "react-hot-toast";
-import { Mail, MessageSquare, Phone } from "lucide-react";
+import { Mail, MessageSquare } from "lucide-react";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
