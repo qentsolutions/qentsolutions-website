@@ -35,6 +35,27 @@ export const Navbar = () => {
     },
   ];
 
+  const solutions = [
+    {
+      name: "Blog",
+      description: "Get a better understanding of your traffic",
+      href: "/blog",
+      icon: BookOpen,
+      color: "bg-orange-100/50",
+      hoverColor: "hover:bg-orange-100/50",
+      iconColor: "text-orange-600",
+    },
+    {
+      name: "Website",
+      description: "Create your website",
+      href: "/website",
+      icon: TextCursor,
+      color: "bg-sky-100/50",
+      hoverColor: "hover:bg-sky-100/50",
+      iconColor: "text-blue-600",
+    },
+  ];
+
 
   return (
     <div className="fixed z-50 w-11/12 top-0 mt-6 h-20 px-4 border-gray-100 border bg-white flex items-center shadow-sm rounded-full">
@@ -118,7 +139,7 @@ export const Navbar = () => {
                   <NavigationMenuContent>
                     <ul className=" p-2 md:w-[400px] ">
                       <li className="flex flex-col">
-                        {resources.map((item) => (
+                        {solutions.map((item) => (
                           <div
                             key={item.name}
                             className={`group relative flex gap-x-6 rounded-lg p-4 ${item.hoverColor}`}
