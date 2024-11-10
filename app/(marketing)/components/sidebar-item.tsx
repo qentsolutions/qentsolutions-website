@@ -1,4 +1,5 @@
 "use client";
+
 import { usePathname, useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { SheetClose } from "@/components/ui/sheet";
@@ -22,23 +23,16 @@ export const SidebarItem = ({ label, href }: SidebarItemProps) => {
   };
 
   return (
-    <SheetClose>
+    <SheetClose asChild>
       <button
         onClick={onClick}
         type="button"
         className={cn(
-          " w-full flex justify-center items-center gap-x-2 text-slate-500 text-sm font-[500] pl-6 transition-all hover:bg-slate-300/20",
-          isActive &&
-            "text-custom-color font-bold bg-sky-200/20 hover:bg-sky-200/20",
+          "w-full flex items-center gap-x-2 text-gray-600 text-sm font-medium px-6 py-3 hover:bg-gray-50 transition-colors",
+          isActive && "text-blue-600 bg-blue-50 hover:bg-blue-50"
         )}
       >
-        <div className="flex items-center gap-x-2 py-4">{label}</div>{" "}
-        <div
-          className={cn(
-            "ml-auto opacity-0 border-2 border-custom-color mr-4 h-full transition-all",
-            isActive && "opacity-100",
-          )}
-        />
+        {label}
       </button>
     </SheetClose>
   );

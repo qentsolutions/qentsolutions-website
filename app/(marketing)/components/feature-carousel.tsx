@@ -95,7 +95,6 @@ export function FeatureCarousel() {
         newPosition = scrollLeft + cardWidth;
       }
 
-      // Boucle le défilement si on dépasse les limites
       if (newPosition < 0) {
         newPosition = scrollWidth - clientWidth;
       } else if (newPosition >= scrollWidth - clientWidth) {
@@ -110,29 +109,31 @@ export function FeatureCarousel() {
   };
 
   return (
-    <div className="relative">
+    <div className="relative px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <div
         ref={scrollRef}
-        className="flex overflow-x-hidden gap-4 pb-8 -mx-4 px-4 snap-x snap-mandatory scrollbar-hide"
+        className="flex overflow-x-hidden gap-4 pb-8 snap-x snap-mandatory scrollbar-hide"
       >
         {features.map((feature, index) => (
           <FeatureCard key={index} {...feature} />
         ))}
       </div>
 
-      <Button
-        onClick={() => scroll("left")}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 rounded-full w-14 h-14 bg-[#14162C] hover:bg-[#14162C]/90 text-white border-0 shadow-lg"
-      >
-        <ChevronLeft className="h-8 w-8" />
-      </Button>
+      <div className="hidden sm:block">
+        <Button
+          onClick={() => scroll("left")}
+          className="absolute left-0 top-1/2 -translate-y-1/2 z-20 rounded-full w-14 h-14 bg-[#14162C] hover:bg-[#14162C]/90 text-white border-0 shadow-lg"
+        >
+          <ChevronLeft className="h-8 w-8" />
+        </Button>
 
-      <Button
-        onClick={() => scroll("right")}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 rounded-full w-14 h-14 bg-[#14162C] hover:bg-[#14162C]/90 text-white border-0 shadow-lg"
-      >
-        <ChevronRight className="h-8 w-8" />
-      </Button>
+        <Button
+          onClick={() => scroll("right")}
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-20 rounded-full w-14 h-14 bg-[#14162C] hover:bg-[#14162C]/90 text-white border-0 shadow-lg"
+        >
+          <ChevronRight className="h-8 w-8" />
+        </Button>
+      </div>
     </div>
   );
 }

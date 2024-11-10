@@ -8,12 +8,42 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { BookOpen, Menu, TextCursor } from "lucide-react";
+import { BookOpen, Menu, TextCursor, Star, Database, Users } from "lucide-react";
 import { SheetContent, Sheet, SheetTrigger } from "@/components/ui/sheet";
 import { SidebarRoutes } from "./sidebar-routes";
 import Image from "next/image";
 
 export const Navbar = () => {
+  const solutions = [
+    {
+      name: "Website",
+      description: "Create your professional website",
+      href: "/website",
+      icon: TextCursor,
+      color: "bg-sky-100/50",
+      hoverColor: "hover:bg-sky-100/50",
+      iconColor: "text-blue-600",
+    },
+    {
+      name: "ERP System",
+      description: "Streamline your business operations",
+      href: "/erp",
+      icon: Database,
+      color: "bg-emerald-100/50",
+      hoverColor: "hover:bg-emerald-100/50",
+      iconColor: "text-emerald-600",
+    },
+    {
+      name: "CRM",
+      description: "Manage customer relationships",
+      href: "/crm",
+      icon: Users,
+      color: "bg-purple-100/50",
+      hoverColor: "hover:bg-purple-100/50",
+      iconColor: "text-purple-600",
+    }
+  ];
+
   const resources = [
     {
       name: "Blog",
@@ -25,42 +55,20 @@ export const Navbar = () => {
       iconColor: "text-orange-600",
     },
     {
-      name: "Engagement",
-      description: "Speak directly to your customers",
-      href: "#",
-      icon: TextCursor,
-      color: "bg-sky-100/50",
-      hoverColor: "hover:bg-sky-100/50",
+      name: "New Features",
+      description: "Stay up to date with our latest updates",
+      href: "/new-features",
+      icon: Star,
+      color: "bg-blue-100/50",
+      hoverColor: "hover:bg-blue-100/50",
       iconColor: "text-blue-600",
-    },
+    }
   ];
-
-  const solutions = [
-    {
-      name: "Blog",
-      description: "Get a better understanding of your traffic",
-      href: "/blog",
-      icon: BookOpen,
-      color: "bg-orange-100/50",
-      hoverColor: "hover:bg-orange-100/50",
-      iconColor: "text-orange-600",
-    },
-    {
-      name: "Website",
-      description: "Create your website",
-      href: "/website",
-      icon: TextCursor,
-      color: "bg-sky-100/50",
-      hoverColor: "hover:bg-sky-100/50",
-      iconColor: "text-blue-600",
-    },
-  ];
-
 
   return (
     <div className="fixed z-50 w-11/12 top-0 mt-6 h-20 px-4 border-gray-100 border bg-white flex items-center shadow-sm rounded-full">
       <Link href="/">
-        <Image src="/logo.svg" width={30} height={30} alt="image" className="md:hidden" />
+        <Image src="/logo.svg" width={30} height={30} alt="Qent Solutions Logo" className="md:hidden" />
       </Link>
       <div className="md:max-w-screen-2xl mx-auto flex items-center w-full justify-between">
         <div className="flex items-center">
@@ -79,7 +87,7 @@ export const Navbar = () => {
                 <Link href="/contact" className="mx-6">
                   <button
                     type="submit"
-                    className={` w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500`}
+                    className={`w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500`}
                   >
                     Get in Touch
                   </button>
@@ -91,45 +99,6 @@ export const Navbar = () => {
 
         <div className="hidden md:flex items-center justify-between w-full">
           <div className="flex items-center ml-4 text-sm">
-            {/* }
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-black bg-transparent px-2 font-normal mx-4">
-                    Products
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className=" p-2 md:w-[400px] ">
-                      <li className="flex flex-col">
-                        {product.map((item) => (
-                          <div
-                            key={item.name}
-                            className={`group relative flex gap-x-6 rounded-lg p-4 ${item.hoverColor}`}
-                          >
-                            <div className={`mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white  ${item.color}`}>
-                              <item.icon className={`h-6 w-6 ${item.iconColor}`} aria-hidden="true" />
-                            </div>
-                            <div>
-                              <a href={item.href} className="font-semibold text-gray-900">
-                                {item.name}
-                                <span className="absolute inset-0" />
-                              </a>
-                              <p className="text-gray-600">{item.description}</p>
-                            </div>
-                          </div>
-                        ))}
-
-                      </li>
-
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-                        */}
-
-
-
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
@@ -137,7 +106,7 @@ export const Navbar = () => {
                     Solutions
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className=" p-2 md:w-[400px] ">
+                    <ul className="p-2 md:w-[400px]">
                       <li className="flex flex-col">
                         {solutions.map((item) => (
                           <div
@@ -145,7 +114,7 @@ export const Navbar = () => {
                             className={`group relative flex gap-x-6 rounded-lg p-4 ${item.hoverColor}`}
                           >
                             <div
-                              className={`mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white  ${item.color}`}
+                              className={`mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white ${item.color}`}
                             >
                               <item.icon
                                 className={`h-6 w-6 ${item.iconColor}`}
@@ -184,7 +153,7 @@ export const Navbar = () => {
                     Resources
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className=" p-2 md:w-[400px] ">
+                    <ul className="p-2 md:w-[400px]">
                       <li className="flex flex-col">
                         {resources.map((item) => (
                           <div
@@ -192,7 +161,7 @@ export const Navbar = () => {
                             className={`group relative flex gap-x-6 rounded-lg p-4 ${item.hoverColor}`}
                           >
                             <div
-                              className={`mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white  ${item.color}`}
+                              className={`mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white ${item.color}`}
                             >
                               <item.icon
                                 className={`h-6 w-6 ${item.iconColor}`}
@@ -226,7 +195,6 @@ export const Navbar = () => {
           <a href="https://www.app.qentsolutions.com">
             <button className="bg-gradient-to-r from-blue-400 to-indigo-600 text-white px-8 py-2 rounded-full mr-2">Get in touch</button>
           </a>
-
         </div>
       </div>
     </div>

@@ -1,180 +1,155 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
-const Blog = () => {
-  const posts = [
-    {
-      id: 1,
-      title: "Boost your conversion rate",
+const categories = [
+  "All Topics",
+  "Cold Emailing",
+  "SEO",
+  "Copywriting",
+  "Marketing",
+  "Productivity"
+];
+
+const posts = [
+  {
+    id: 1,
+    title: "Mastering Customer Relationships in 2024",
+    slug: "mastering-customer-relationships-2024",
+    description:
+      "Learn the latest strategies and tools for building lasting customer relationships in today's digital landscape. Discover how AI and automation can enhance your CRM efforts.",
+    date: "Mar 16, 2024",
+    datetime: "2024-03-16",
+    category: { title: "Marketing", href: "#" },
+    author: {
+      name: "Sarah Chen",
+      role: "Head of Customer Success",
       href: "#",
-      description:
-        "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-      date: "Mar 16, 2020",
-      datetime: "2020-03-16",
-      category: { title: "Marketing", href: "#" },
-      author: {
-        name: "Michael Foster",
-        role: "Co-Founder / CTO",
-        href: "#",
-        imageUrl:
-          "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-      },
+      imageUrl: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     },
-    {
-      id: 1,
-      title: "Boost your conversion rate",
+  },
+  {
+    id: 2,
+    title: "The Future of Business Automation",
+    slug: "future-business-automation",
+    description:
+      "Explore how automation is transforming business operations and learn practical ways to implement automated solutions in your workflow.",
+    date: "Mar 10, 2024",
+    datetime: "2024-03-10",
+    category: { title: "Productivity", href: "#" },
+    author: {
+      name: "Alex Morgan",
+      role: "Tech Lead",
       href: "#",
-      description:
-        "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-      date: "Mar 16, 2020",
-      datetime: "2020-03-16",
-      category: { title: "Marketing", href: "#" },
-      author: {
-        name: "Michael Foster",
-        role: "Co-Founder / CTO",
-        href: "#",
-        imageUrl:
-          "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-      },
+      imageUrl: "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     },
-    {
-      id: 1,
-      title: "Boost your conversion rate",
+  },
+  {
+    id: 3,
+    title: "Effective Email Marketing Strategies",
+    slug: "effective-email-marketing",
+    description:
+      "Discover proven email marketing techniques that drive engagement and conversions. Learn how to craft compelling campaigns that resonate with your audience.",
+    date: "Mar 5, 2024",
+    datetime: "2024-03-05",
+    category: { title: "Cold Emailing", href: "#" },
+    author: {
+      name: "Lisa Thompson",
+      role: "Marketing Specialist",
       href: "#",
-      description:
-        "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-      date: "Mar 16, 2020",
-      datetime: "2020-03-16",
-      category: { title: "Marketing", href: "#" },
-      author: {
-        name: "Michael Foster",
-        role: "Co-Founder / CTO",
-        href: "#",
-        imageUrl:
-          "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-      },
+      imageUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     },
-    {
-      id: 1,
-      title: "Boost your conversion rate",
-      href: "#",
-      description:
-        "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-      date: "Mar 16, 2020",
-      datetime: "2020-03-16",
-      category: { title: "Marketing", href: "#" },
-      author: {
-        name: "Michael Foster",
-        role: "Co-Founder / CTO",
-        href: "#",
-        imageUrl:
-          "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-      },
-    },
-    {
-      id: 1,
-      title: "Boost your conversion rate",
-      href: "#",
-      description:
-        "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-      date: "Mar 16, 2020",
-      datetime: "2020-03-16",
-      category: { title: "Marketing", href: "#" },
-      author: {
-        name: "Michael Foster",
-        role: "Co-Founder / CTO",
-        href: "#",
-        imageUrl:
-          "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-      },
-    },
-    {
-      id: 1,
-      title: "Boost your conversion rate",
-      href: "#",
-      description:
-        "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-      date: "Mar 16, 2020",
-      datetime: "2020-03-16",
-      category: { title: "Marketing", href: "#" },
-      author: {
-        name: "Michael Foster",
-        role: "Co-Founder / CTO",
-        href: "#",
-        imageUrl:
-          "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-      },
-    },
-  ];
+  }
+];
+
+const BlogPage = () => {
+  const [selectedCategory, setSelectedCategory] = useState("All Topics");
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredPosts = posts.filter(post => {
+    const matchesCategory = selectedCategory === "All Topics" || post.category.title === selectedCategory;
+    const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         post.description.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
   return (
-    <div>
-      <div className=" py-40 text-center bg-gray-100/50">
-        <p className="text-5xl text-gray-700 font-bold leading-tight">
-          The content you need to become
-          <br /> a{" "}
-          <span className=" ml-2 text-3xl md:text-5xl bg-gradient-to-r mt-4 from-blue-400 to-indigo-600 text-white px-4 rounded-md w-fit font-bold">
-            Qent Solutions Expert
-          </span>
-        </p>
-        <p className="mt-8 text-2xl">
-          The latest news, articles, and resources, <br /> sent to your inbox
-          weekly.
-        </p>
-        <Button className="mt-8 px-10 py-6 bg-blue-600 text-lg font-semibold hover:bg-blue-700 transition-colors duration-500 animate-slide">
-          Sign up for free
-        </Button>
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Section */}
+      <div className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-indigo-700">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Insights for Growth
+            </h1>
+            <p className="text-xl text-gray-100 max-w-2xl mx-auto">
+              Discover strategies, tips, and insights to help your business thrive in today&apos;s digital landscape.
+            </p>
+          </motion.div>
+
+          {/* Search Bar */}
+          <div className="mt-8 max-w-2xl mx-auto">
+            <input
+              type="text"
+              placeholder="Search articles..."
+              className="w-full px-6 py-3 rounded-full border-2 border-transparent focus:border-white bg-white/10 text-white placeholder-gray-300 focus:outline-none backdrop-blur-sm"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </div>
+        </div>
       </div>
 
-      <div className="bg-gray-100/50 pb-64">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 ">
-          <div className="mx-auto  lg:mx-0 font-bold text-2xl text-gray-700">
-            Content library
-            <div className="flex gap-4 mt-8 bg-gray-200 py-2 justify-around text-base rounded-lg font-medium">
-              <button className="bg-blue-600 text-white px-4 py-1 rounded-lg">
-                All Topics
-              </button>
-              <button className="px-4 py-1 rounded-lg text-gray-400">
-                Cold Emailing
-              </button>
-              <button className="px-4 py-1 rounded-lg text-gray-400">
-                SEO
-              </button>
-              <button className="px-4 py-1 rounded-lg text-gray-400">
-                Copywriting
-              </button>
-              <button className="px-4 py-1 rounded-lg text-gray-400">
-                Marketing
-              </button>
-              <button className="px-4 py-1 rounded-lg text-gray-4mathi00">
-                Productivity
-              </button>
-            </div>
-          </div>
+      {/* Category Filters */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="flex flex-wrap gap-4 justify-center">
+          {categories.map((category) => (
+            <Button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`rounded-full px-6 py-2 text-sm font-medium transition-colors
+                ${selectedCategory === category 
+                  ? 'bg-blue-600 text-white' 
+                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}
+            >
+              {category}
+            </Button>
+          ))}
+        </div>
+      </div>
 
-          <div className=" rounded-lg lg:p-10 p-0 mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200  sm:mt-10  lg:mx-0 lg:max-w-none lg:grid-cols-3">
-            {posts.map((post) => (
-              <article
-                key={post.id}
-                className="flex max-w-xl flex-col items-start justify-between bg-white p-4 rounded-lg shadow-md"
-              >
+      {/* Blog Posts Grid */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredPosts.map((post) => (
+            <motion.article
+              key={post.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="flex flex-col bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            >
+              <Link href={`/blog/${post.slug}`} className="p-6 flex-1">
                 <div className="flex items-center gap-x-4 text-xs">
                   <time dateTime={post.datetime} className="text-gray-500">
                     {post.date}
                   </time>
-                  <a
-                    href={post.category.href}
-                    className="relative z-10 rounded-full bg-blue-600 text-white px-3 py-1.5 font-medium  hover:bg-gray-100"
-                  >
+                  <span className="relative z-10 rounded-full bg-blue-50 px-3 py-1.5 font-medium text-blue-600">
                     {post.category.title}
-                  </a>
+                  </span>
                 </div>
                 <div className="group relative">
                   <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                    <a href={post.href}>
-                      <span className="absolute inset-0" />
-                      {post.title}
-                    </a>
+                    {post.title}
                   </h3>
                   <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
                     {post.description}
@@ -183,26 +158,56 @@ const Blog = () => {
                 <div className="relative mt-8 flex items-center gap-x-4">
                   <Image
                     src={post.author.imageUrl}
-                    alt="Image"
+                    alt={post.author.name}
+                    width={40}
+                    height={40}
                     className="h-10 w-10 rounded-full bg-gray-50"
                   />
                   <div className="text-sm leading-6">
                     <p className="font-semibold text-gray-900">
-                      <a href={post.author.href}>
-                        <span className="absolute inset-0" />
-                        {post.author.name}
-                      </a>
+                      {post.author.name}
                     </p>
                     <p className="text-gray-600">{post.author.role}</p>
                   </div>
                 </div>
-              </article>
-            ))}
-          </div>
+              </Link>
+            </motion.article>
+          ))}
+        </div>
+      </div>
+
+      {/* Newsletter Section */}
+      <div className="bg-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-center"
+          >
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Stay Updated
+            </h2>
+            <p className="text-lg text-gray-600 mb-8">
+              Get the latest articles and insights delivered to your inbox weekly.
+            </p>
+            <div className="max-w-md mx-auto">
+              <div className="flex gap-4 flex-col sm:flex-row">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-6 py-3 rounded-full border border-gray-300 focus:outline-none focus:border-blue-500"
+                />
+                <Button className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700">
+                  Subscribe
+                </Button>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </div>
   );
 };
 
-export default Blog;
+export default BlogPage;

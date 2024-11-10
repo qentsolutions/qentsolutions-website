@@ -4,8 +4,46 @@ import Link from "next/link";
 import { SidebarItem } from "./sidebar-item";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { BookOpen, TextCursor, Star, Database, Users } from "lucide-react";
+import config from "@/app/config";
 
-const guestRoutes = [
+const solutions = [
+  {
+    label: "Website",
+    href: "/website",
+    icon: TextCursor,
+    description: "Create your professional website",
+  },
+  {
+    label: "ERP System",
+    href: "/erp",
+    icon: Database,
+    description: "Streamline your business operations",
+  },
+  {
+    label: "CRM",
+    href: "/crm",
+    icon: Users,
+    description: "Manage customer relationships",
+  }
+];
+
+const resources = [
+  {
+    label: "Blog",
+    href: "/blog",
+    icon: BookOpen,
+    description: "Get a better understanding of your traffic",
+  },
+  {
+    label: "New Features",
+    href: "/new-features",
+    icon: Star,
+    description: "Stay up to date with our latest updates",
+  }
+];
+
+const mainRoutes = [
   {
     label: "Home",
     href: "/",
@@ -14,34 +52,73 @@ const guestRoutes = [
     label: "Pricing",
     href: "/pricing",
   },
-  {
-    label: "Blog",
-    href: "/blog",
-  },
-  {
-    label: "Contact",
-    href: "/contact",
-  },
 ];
 
 export const SidebarRoutes = () => {
-  const routes = guestRoutes;
-
   return (
     <div className="flex flex-col w-full">
-      <Image
-        src="/logo.svg"
-        width={50}
-        height={50}
-        alt="logo image"
-        className="mb-8 mt-4 ml-4"
-      />
-      {routes.map((route) => (
-        <SidebarItem key={route.href} label={route.label} href={route.href} />
+      <div className="px-4">
+        <Image
+          src="/logo.svg"
+          width={50}
+          height={50}
+          alt={`${config.appName} logo`}
+          className="mb-8 mt-4"
+        />
+      </div>
+
+      {/* Main Routes */}
+      {mainRoutes.map((route) => (
+        <SidebarItem key={route.href} {...route} />
       ))}
-      <Button size="sm" variant="outline" className="w-28 mt-8 ml-4">
-        <Link href="/sign-in">Login</Link>
-      </Button>
+
+      {/* Solutions Section */}
+      <div className="mt-4 px-6">
+        <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+          Solutions
+        </h3>
+        {solutions.map((solution) => (
+          <Link
+            key={solution.href}
+            href={solution.href}
+            className="flex items-center gap-3 px-2 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg"
+          >
+            <solution.icon className="h-5 w-5" aria-hidden="true" />
+            <div>
+              <div className="font-medium">{solution.label}</div>
+              <p className="text-xs text-gray-500">{solution.description}</p>
+            </div>
+          </Link>
+        ))}
+      </div>
+
+      {/* Resources Section */}
+      <div className="mt-4 px-6">
+        <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+          Resources
+        </h3>
+        {resources.map((resource) => (
+          <Link
+            key={resource.href}
+            href={resource.href}
+            className="flex items-center gap-3 px-2 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg"
+          >
+            <resource.icon className="h-5 w-5" aria-hidden="true" />
+            <div>
+              <div className="font-medium">{resource.label}</div>
+              <p className="text-xs text-gray-500">{resource.description}</p>
+            </div>
+          </Link>
+        ))}
+      </div>
+
+      <div className="mt-4 px-6">
+        <Link href="/contact">
+          <Button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600">
+            Get in Touch
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 };
