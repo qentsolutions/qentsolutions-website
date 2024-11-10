@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Check, ArrowRight, BarChart3, Users2, Package, Workflow, Database, Shield } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 
 const features = [
   {

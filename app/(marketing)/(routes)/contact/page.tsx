@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Phone, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import { toast } from "react-hot-toast";
 import { ContactForm } from "./components/contact-form";

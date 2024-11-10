@@ -43,7 +43,7 @@ export default function NewFeatures() {
             transition={{ duration: 0.5 }}
             className="text-center mb-8"
           >
-            <h1 className="text-4xl font-bold mb-4">What's New</h1>
+            <h1 className="text-4xl font-bold mb-4">What&apos;s New</h1>
             <p className="text-xl text-blue-100 max-w-2xl mx-auto">
               Stay up to date with our latest features, improvements, and updates
             </p>

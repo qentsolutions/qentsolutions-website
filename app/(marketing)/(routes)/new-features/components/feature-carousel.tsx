@@ -17,13 +17,16 @@ export function FeatureCarousel() {
   const [direction, setDirection] = useState(0);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setDirection(1);
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % latestFeatures.length);
-    }, 5000);
+    if (latestFeatures.length > 0) {
+      const timer = setInterval(() => {
+        setDirection(1);
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % latestFeatures.length);
+      }, 5000);
 
-    return () => clearInterval(timer);
-  }, []);
+      return () => clearInterval(timer);
+    }
+  }, [latestFeatures.length]);
+
 
   const slideVariants = {
     enter: (direction: number) => ({
@@ -129,9 +132,8 @@ export function FeatureCarousel() {
         {latestFeatures.map((_, index) => (
           <button
             key={index}
-            className={`w-2 h-2 rounded-full transition-colors ${
-              index === currentIndex ? "bg-blue-600" : "bg-gray-300"
-            }`}
+            className={`w-2 h-2 rounded-full transition-colors ${index === currentIndex ? "bg-blue-600" : "bg-gray-300"
+              }`}
             onClick={() => {
               setDirection(index > currentIndex ? 1 : -1);
               setCurrentIndex(index);

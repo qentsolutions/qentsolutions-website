@@ -1,6 +1,6 @@
 "use client";
 
-import { useParams, useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
 import Image from "next/image";
@@ -105,7 +105,6 @@ const features: Record<string, Feature> = {
 
 export default function FeatureDetails() {
   const params = useParams();
-  const router = useRouter();
   const id = params.id as string;
   const feature = features[id];
 

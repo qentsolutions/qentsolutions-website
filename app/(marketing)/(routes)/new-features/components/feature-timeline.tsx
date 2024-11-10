@@ -24,7 +24,7 @@ export function FeatureTimeline({ features }: FeatureTimelineProps) {
       {/* Timeline line */}
       <div className="absolute left-2.5 top-0 bottom-0 w-0.5 bg-blue-100" />
 
-      {Object.entries(groupedFeatures).map(([month, monthFeatures], monthIndex) => (
+      {Object.entries(groupedFeatures).map(([month, monthFeatures]) => (
         <div key={month} className="mb-12">
           {/* Month marker */}
           <div className="flex items-center mb-8">
