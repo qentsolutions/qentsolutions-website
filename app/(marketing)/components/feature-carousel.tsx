@@ -109,7 +109,8 @@ export function FeatureCarousel() {
   };
 
   return (
-    <div className="relative px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div className="relative px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto mt-8">
+      
       <div
         ref={scrollRef}
         className="flex overflow-x-hidden gap-4 pb-8 snap-x snap-mandatory scrollbar-hide"

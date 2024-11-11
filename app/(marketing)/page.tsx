@@ -8,7 +8,7 @@ import { FeatureCarousel } from "./components/feature-carousel";
 const MarketingPage = () => {
 
   return (
-    <div className="mt-14">
+    <div className="mt-14 ">
       <Hero />
       <FeatureCarousel />
       {/*<Stats /> */}
