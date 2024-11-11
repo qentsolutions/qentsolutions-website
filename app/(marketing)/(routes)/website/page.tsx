@@ -6,6 +6,7 @@ import { HeroParallax } from "../../components/hero-parallax";
 import { Check, Code, Globe, Rocket, Zap } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { CardsCarousel } from "./components/cards-carousel";
 
 const products = [
   {
@@ -167,6 +168,8 @@ export default function Website() {
         
         <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent" />
       </div>
+
+      <CardsCarousel />
 
       {/* Features Section */}
       <div className="py-24 bg-white">

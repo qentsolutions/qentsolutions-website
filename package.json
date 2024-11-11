@@ -21,6 +21,7 @@
     "@radix-ui/react-separator": "^1.1.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-switch": "^1.1.0",
+    "@tabler/icons-react": "^3.21.0",
     "aws-amplify": "^6.6.2",
     "aws-sdk": "^2.1691.0",
     "axios": "^1.7.7",
