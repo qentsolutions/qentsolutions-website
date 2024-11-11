@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Check, Code, Globe, Rocket, Zap } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 import { CardsCarousel } from "./components/cards-carousel";
 
 const products = [

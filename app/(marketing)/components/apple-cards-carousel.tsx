@@ -1,4 +1,3 @@
-/* eslint-disable @react-hooks/exhaustive-deps */
 "use client";
 import React, {
   useEffect,
@@ -33,7 +32,7 @@ export const CarouselContext = createContext<{
   onCardClose: (index: number) => void;
   currentIndex: number;
 }>({
-  onCardClose: () => {},
+  onCardClose: () => { },
   currentIndex: 0,
 });
 
@@ -190,10 +189,10 @@ export const Card = ({
     setOpen(true);
   };
 
-  const handleClose = () => {
+  const handleClose = useCallback(() => {
     setOpen(false);
     onCardClose(index);
-  };
+  }, [index, onCardClose]);
 
   return (
     <>
