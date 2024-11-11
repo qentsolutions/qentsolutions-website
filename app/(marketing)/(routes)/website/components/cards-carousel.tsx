@@ -16,7 +16,7 @@ export function CardsCarousel() {
                 Our Latest Projects
             </h2>
             <p className="max-w-7xl pl-4 mx-auto text-gray-600 mb-12">
-                Discover how we've helped businesses transform their digital presence
+                Discover how we&apos;ve helped businesses transform their digital presence
             </p>
             <Carousel items={cards} />
         </div>

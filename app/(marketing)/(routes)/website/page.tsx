@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { HeroParallax } from "../../components/hero-parallax";
 import { Check, Code, Globe, Rocket, Zap } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -102,44 +101,8 @@ const packages = [
   },
 ];
 
-const ProjectGrid = () => {
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto px-4">
-      {products.map((project, index) => (
-        <motion.div
-          key={project.title + index}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: index * 0.1 }}
-          className="group relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300"
-        >
-          <Link href={project.link} target="_blank" className="block">
-            <div className="relative h-64 overflow-hidden">
-              <Image
-                src={project.thumbnail}
-                alt={project.title}
-                fill
-                className="object-cover transform group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <span className="text-white text-lg font-semibold">View Project</span>
-              </div>
-            </div>
-            <div className="p-6">
-              <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-600 transition-colors">
-                {project.title}
-              </h3>
-              <p className="text-gray-600">{project.description}</p>
-            </div>
-          </Link>
-        </motion.div>
-      ))}
-    </div>
-  );
-};
 
 export default function Website() {
-  const useParallax = products.length >= 6;
 
   return (
     <div className="min-h-screen">
