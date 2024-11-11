@@ -6,33 +6,6 @@ import { Check, Code, Globe, Rocket, Zap } from "lucide-react";
 import Link from "next/link";
 import { CardsCarousel } from "./components/cards-carousel";
 
-const products = [
-  {
-    title: "B-Lab",
-    link: "https://b-lab.app",
-    thumbnail: "/website/blab.png",
-    description: "A modern laboratory management system with intuitive interface.",
-  },
-  {
-    title: "Workflow Made Easy",
-    link: "https://wme.us.com",
-    thumbnail: "/website/wme.png",
-    description: "Streamlined workflow automation platform for businesses.",
-  },
-  {
-    title: "B-Lab",
-    link: "https://b-lab.app",
-    thumbnail: "/website/blab.png",
-    description: "A modern laboratory management system with intuitive interface.",
-  },
-  {
-    title: "Workflow Made Easy",
-    link: "https://wme.us.com",
-    thumbnail: "/website/wme.png",
-    description: "Streamlined workflow automation platform for businesses.",
-  }
-];
-
 const features = [
   {
     icon: Globe,
