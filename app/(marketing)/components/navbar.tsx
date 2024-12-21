@@ -192,7 +192,7 @@ export const Navbar = () => {
             <Link href="/contact">Contact</Link>
           </div>
 
-          <a href="https://www.app.qentsolutions.com">
+          <a href="https://www.app.qentsolutions.com/auth/login">
             <button className="bg-gradient-to-r from-blue-400 to-indigo-600 text-white px-8 py-2 rounded-full mr-2">Get in touch</button>
           </a>
         </div>

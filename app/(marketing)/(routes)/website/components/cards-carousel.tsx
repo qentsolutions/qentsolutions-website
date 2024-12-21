@@ -98,9 +98,10 @@ const WebsitePreview = ({ url, viewMode }: { url: string; viewMode: "desktop" | 
     );
 };
 
-const ViewModeToggle = ({ viewMode, onChange }: {
+const ViewModeToggle = ({ viewMode, onChange, url }: {
     viewMode: "desktop" | "mobile";
     onChange: (mode: "desktop" | "mobile") => void;
+    url: string;
 }) => {
     const isMobile = useIsMobile();
 
@@ -109,25 +110,28 @@ const ViewModeToggle = ({ viewMode, onChange }: {
     }
 
     return (
-        <div className="flex items-center gap-2 mb-6">
-            <Button
-                variant={viewMode === "desktop" ? "default" : "outline"}
-                size="sm"
-                onClick={() => onChange("desktop")}
-                className="flex items-center gap-2"
-            >
-                <Monitor className="h-4 w-4" />
-                Desktop
-            </Button>
-            <Button
-                variant={viewMode === "mobile" ? "default" : "outline"}
-                size="sm"
-                onClick={() => onChange("mobile")}
-                className="flex items-center gap-2"
-            >
-                <Smartphone className="h-4 w-4" />
-                Mobile
-            </Button>
+        <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2 mb-6">
+                <Button
+                    variant={viewMode === "desktop" ? "default" : "outline"}
+                    size="sm"
+                    onClick={() => onChange("desktop")}
+                    className="flex items-center gap-2"
+                >
+                    <Monitor className="h-4 w-4" />
+                    Desktop
+                </Button>
+                <Button
+                    variant={viewMode === "mobile" ? "default" : "outline"}
+                    size="sm"
+                    onClick={() => onChange("mobile")}
+                    className="flex items-center gap-2"
+                >
+                    <Smartphone className="h-4 w-4" />
+                    Mobile
+                </Button>
+            </div>
+            <a href={url} target="_blank" className="underline ml-4 text-sm text-blue-500">View website</a>
         </div>
     );
 };
@@ -144,7 +148,7 @@ const ProjectContent = ({ url }: { url: string }) => {
 
     return (
         <div className="space-y-6">
-            <ViewModeToggle viewMode={viewMode} onChange={setViewMode} />
+            <ViewModeToggle viewMode={viewMode} onChange={setViewMode} url={url} />
             <AnimatePresence mode="wait">
                 <motion.div
                     key={viewMode}
@@ -224,5 +228,5 @@ const data = [
         title: "B-Lab",
         src: "/website/blab-logo.png",
         content: <Blab />,
-    }
+    },
 ];
