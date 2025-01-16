@@ -1,7 +1,7 @@
 const config = {
   appName: "QentSolutions",
   appDescription:
-    "Qent Solutions is an innovative group specializing in creating tailored technological solutions to address diverse business challenges. We focus on developing custom software and websites that enhance operational efficiency and deliver optimal user experiences. ",
+    "An all-in-one platform designed to streamline project management, combining task boards, real-time collaboration, document sharing, and visual timelines. Simplify workflow management, enhance team productivity, and drive project success with powerful tools for every step of the process.",
   domainName: "https://qentsolutions.com",
   stripe: {
     plans: [

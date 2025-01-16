@@ -9,7 +9,7 @@ const features = [
   {
     title: "Marketing",
     subtitle: "Work Management",
-    color: "bg-purple-600",
+    color: "bg-blue-400",
     image: "/hero-landing-img.png",
     features: [
       "Social media schedule",
@@ -21,7 +21,7 @@ const features = [
   {
     title: "Projects and Tasks",
     subtitle: "Work Management",
-    color: "bg-purple-400",
+    color: "bg-blue-500",
     image: "/hero-landing-img.png",
     features: [
       "Project management",
@@ -33,7 +33,7 @@ const features = [
   {
     title: "Sales and CRM",
     subtitle: "CRM",
-    color: "bg-emerald-600",
+    color: "bg-blue-600",
     image: "/hero-landing-img.png",
     features: [
       "Lead management",
@@ -45,37 +45,13 @@ const features = [
   {
     title: "IT and Support",
     subtitle: "Service",
-    color: "bg-blue-400",
+    color: "bg-blue-700",
     image: "/hero-landing-img.png",
     features: [
       "Ticket management",
       "Knowledge base",
       "SLA monitoring",
       "Customer support",
-    ],
-  },
-  {
-    title: "Operations",
-    subtitle: "Work Management",
-    color: "bg-purple-500",
-    image: "/hero-landing-img.png",
-    features: [
-      "Inventory management",
-      "Order tracking",
-      "Logistics",
-      "Procurement",
-    ],
-  },
-  {
-    title: "Creative and Design",
-    subtitle: "Work Management",
-    color: "bg-gray-500",
-    image: "/hero-landing-img.png",
-    features: [
-      "Asset management",
-      "Creative workflow",
-      "Design review",
-      "Media library",
     ],
   },
 ];

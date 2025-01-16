@@ -12,6 +12,7 @@ import { BookOpen, Menu, TextCursor, Star, Database, Users } from "lucide-react"
 import { SheetContent, Sheet, SheetTrigger } from "@/components/ui/sheet";
 import { SidebarRoutes } from "./sidebar-routes";
 import Image from "next/image";
+import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 
 export const Navbar = () => {
   const solutions = [
@@ -84,12 +85,12 @@ export const Navbar = () => {
               <SheetContent className="bg-white flex flex-col justify-between px-0">
                 <SidebarRoutes />
 
-                <Link href="/contact" className="mx-6">
+                <Link href="https://qentsolutions.com/auth/register" className="mx-6">
                   <button
                     type="submit"
                     className={`w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500`}
                   >
-                    Get in Touch
+                    Sign Up
                   </button>
                 </Link>
               </SheetContent>
@@ -192,9 +193,14 @@ export const Navbar = () => {
             <Link href="/contact">Contact</Link>
           </div>
 
-          <a href="https://www.app.qentsolutions.com/auth/login">
-            <button className="bg-gradient-to-r from-blue-400 to-indigo-600 text-white px-8 py-2 rounded-full mr-2">Get in touch</button>
-          </a>
+
+          <div className="flex items-center justify-center">
+            <a href="https://www.app.qentsolutions.com/auth/login">
+              <InteractiveHoverButton className="mr-2">Login</InteractiveHoverButton>
+            </a>
+           
+          </div>
+
         </div>
       </div>
     </div>

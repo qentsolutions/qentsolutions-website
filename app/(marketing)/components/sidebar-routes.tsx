@@ -113,10 +113,13 @@ export const SidebarRoutes = () => {
       </div>
 
       <div className="mt-4 px-6">
-        <Link href="/contact">
-          <Button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600">
-            Get in Touch
-          </Button>
+        <Link href="https://qentsolutions.com/auth/register" className="mx-6">
+          <button
+            type="submit"
+            className={`w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500`}
+          >
+            Sign Up
+          </button>
         </Link>
       </div>
     </div>

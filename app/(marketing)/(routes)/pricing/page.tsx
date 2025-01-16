@@ -7,6 +7,7 @@ import Image from "next/image";
 import { Check, X } from "lucide-react";
 import AvatarCircles from "@/app/(marketing)/components/avatar-circles";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Pricing = () => {
   const [isAnnually, setIsAnnually] = useState(false);
@@ -38,13 +39,13 @@ const Pricing = () => {
     <div>
       <div className="min-h-screen">
         {/* Hero Section */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="text-center pt-20 pb-12 px-4"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="text-4xl md:text-5xl font-black mb-6 text-gray-800">
             Simple pricing, <span className="text-blue-600">no commitment</span>
           </h1>
           <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
@@ -67,7 +68,7 @@ const Pricing = () => {
         {/* Pricing Cards */}
         <div className="flex flex-col lg:flex-row justify-center gap-8 px-4 lg:px-8 max-w-7xl mx-auto mb-20">
           {/* Starter Plan */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -110,7 +111,7 @@ const Pricing = () => {
           </motion.div>
 
           {/* Growth Plan */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -161,7 +162,7 @@ const Pricing = () => {
           </motion.div>
 
           {/* Business Plan */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
@@ -409,7 +410,7 @@ const Pricing = () => {
         {/* Social Proof Section */}
         <div className="bg-gray-50 py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -453,19 +454,22 @@ const Pricing = () => {
 
         {/* CTA Section */}
         <div className="max-w-5xl mx-auto px-4 py-20">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 md:p-16 text-center text-white"
+            className="bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl p-8 md:p-16 text-center text-white"
           >
             <h2 className="text-3xl font-bold mb-4">Ready to get started?</h2>
             <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
               Join thousands of satisfied users and transform your business today.
             </p>
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors">
-              Start Your Free Trial
-            </button>
+            <Link href="https://app.qentsolutions.com/auth/register">
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors">
+                START FOR FREE
+              </button>
+            </Link>
+
           </motion.div>
         </div>
       </div>

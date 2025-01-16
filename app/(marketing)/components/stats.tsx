@@ -29,45 +29,10 @@ export default function StatsSection() {
 
 
   return (
-    <div className="w-full bg-gradient-to-t from-blue-600 via-blue-600 to-white mb-48 h-[calc(100vh-80px)]">
+    <div className="w-full bg-gradient-to-t from-blue-600 via-indigo-600 to-white mb-20 pb-28">
       <div className="container mx-auto px-4">
         {/* Video Player Section */}
-        <div className="mx-auto mb-16 max-w-3xl rounded-2xl bg-zinc-900 p-48">
-          <div className="mb-8 flex items-center justify-center">
-            <h2 className="text-4xl font-semibold text-white">Based on</h2>
-          </div>
-
-          {/* Video Controls */}
-          <div className="flex items-center gap-4">
-            <button
-              onClick={() => setIsPlaying(!isPlaying)}
-              className="rounded-full p-2 text-white hover:bg-white/10"
-              aria-label={isPlaying ? "Pause" : "Play"}
-            >
-              {isPlaying ? (
-                <Pause className="h-6 w-6" />
-              ) : (
-                <Play className="h-6 w-6" />
-              )}
-            </button>
-
-            <Slider
-              defaultValue={[0]}
-              max={100}
-              step={1}
-              className="flex-1"
-              aria-label="Progress"
-            />
-
-            <span className="text-sm text-white/60">00:09</span>
-
-            <button
-              className="rounded-full p-2 text-white hover:bg-white/10"
-              aria-label="Volume"
-            >
-              <Volume2 className="h-6 w-6" />
-            </button>
-          </div>
+        <div className="mx-auto mb-16 max-w-7xl rounded-2xl bg-zinc-900 p-48 h-[600px]">
         </div>
 
         {/* Stats Section */}

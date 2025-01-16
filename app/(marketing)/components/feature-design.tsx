@@ -64,7 +64,7 @@ const FeatureDesign = () => {
 
           {/* Secondary Feature Card */}
           <motion.div 
-            className="bg-gradient-to-br from-indigo-600 to-purple-600 min-h-[400px] relative overflow-hidden rounded-2xl p-8"
+            className="bg-gradient-to-br from-indigo-600 to-blue-600 min-h-[400px] relative overflow-hidden rounded-2xl p-8"
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.2 }}
           >

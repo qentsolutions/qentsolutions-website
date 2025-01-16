@@ -13,9 +13,8 @@ const MarketingPage = () => {
     <div className="mt-14 ">
       <Hero />
       <Stats />
-      <FeatureCarousel />
-      <Problem />
       <FeatureDesign />
+      <Problem />
       <FeaturesAccordion />
       <CTA />
     </div>
