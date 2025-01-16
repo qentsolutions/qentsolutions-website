@@ -66,9 +66,9 @@ export const Navbar = () => {
   ];
 
   return (
-    <div className="fixed z-50 w-11/12 top-0 mt-6 h-20 px-4 border-gray-100 border bg-white flex items-center shadow-sm rounded-full">
+    <div className="fixed z-50 w-full top-0 h-20 px-4 border-gray-100 border bg-white flex items-center shadow-sm">
       <Link href="/">
-        <Image src="/logo.svg" width={30} height={30} alt="Qent Solutions Logo" className="md:hidden" />
+        <Image src="/logo.png" width={30} height={30} alt="Qent Solutions Logo" className="md:hidden" />
       </Link>
       <div className="md:max-w-screen-2xl mx-auto flex items-center w-full justify-between">
         <div className="flex items-center">

@@ -6,13 +6,13 @@ import { ArrowRight } from "lucide-react";
 
 export default function CTA() {
   return (
-    <div className="bg-white py-24">
+    <div className="bg-white pb-20">
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="relative isolate overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-24 shadow-2xl sm:rounded-3xl sm:px-24"
+          className="relative isolate overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-12 shadow-2xl sm:rounded-3xl sm:px-24"
         >
           {/* Background Elements */}
           <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-indigo-500/20" />
