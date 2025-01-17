@@ -1,19 +1,17 @@
 import Hero from "./components/hero";
-import Problem from "./components/problem";
 import FeaturesAccordion from "./components/feature-resume";
-import FeatureDesign from "./components/feature-design";
 import CTA from "./components/cta";
-import { FeatureCarousel } from "./components/feature-carousel";
 import Stats from "./components/stats"
-import { FeatureBento } from "./components/feature-bento";
+import Problem from "./components/problem";
+import { FeatureBentoGrid } from "./components/bento-grid";
 
 const MarketingPage = () => {
 
   return (
-    <div className="mt-14 ">
+    <div className="mt-14">
       <Hero />
       <Stats />
-      <FeatureDesign />
+      <FeatureBentoGrid />
       <Problem />
       <FeaturesAccordion />
       <CTA />

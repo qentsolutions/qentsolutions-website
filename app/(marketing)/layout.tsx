@@ -7,7 +7,6 @@ const MarketingLayout = ({ children }: { children: React.ReactNode }) => {
       <div className="flex items-center justify-center mb-14">
         <Navbar />
       </div>
-
       <main>{children}</main>
       <Footer />
     </div>

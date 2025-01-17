@@ -100,6 +100,7 @@ export const Navbar = () => {
 
         <div className="hidden md:flex items-center justify-between w-full">
           <div className="flex items-center ml-4 text-sm">
+            {/*
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
@@ -142,8 +143,8 @@ export const Navbar = () => {
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
-
-            <Link href="/pricing" className="mx-4">
+            */}
+            <Link href="/pricing" className="ml-20 mx-4">
               Pricing
             </Link>
 
@@ -198,7 +199,7 @@ export const Navbar = () => {
             <a href="https://www.app.qentsolutions.com/auth/login">
               <InteractiveHoverButton className="mr-2">Login</InteractiveHoverButton>
             </a>
-           
+
           </div>
 
         </div>

@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { SidebarItem } from "./sidebar-item";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import { BookOpen, TextCursor, Star, Database, Users } from "lucide-react";
 import config from "@/app/config";
 
@@ -72,7 +71,7 @@ export const SidebarRoutes = () => {
         <SidebarItem key={route.href} {...route} />
       ))}
 
-      {/* Solutions Section */}
+      {/* Solutions Section 
       <div className="mt-4 px-6">
         <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
           Solutions
@@ -91,6 +90,7 @@ export const SidebarRoutes = () => {
           </Link>
         ))}
       </div>
+      */}
 
       {/* Resources Section */}
       <div className="mt-4 px-6">

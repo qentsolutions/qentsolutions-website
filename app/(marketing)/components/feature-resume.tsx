@@ -138,7 +138,7 @@ const FeaturesAccordion = () => {
   const [featureSelected, setFeatureSelected] = useState(0);
 
   return (
-    <div className="p-12 py-20 max-w-7xl mx-auto mt-8">
+    <div className="pt-4 pb-20 max-w-5xl mx-auto mt-8">
       <div className="flex items-center justify-center">
         <h2 className="text-4xl text-gray-700 text-center font-bold mb-12">
           Everything you need to boost your sales and <br /> grow your business.
