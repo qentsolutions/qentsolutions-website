@@ -197,7 +197,7 @@ export const Navbar = () => {
 
           <div className="flex items-center justify-center">
             <a href="https://www.app.qentsolutions.com/auth/login">
-              <InteractiveHoverButton className="mr-2">Login</InteractiveHoverButton>
+              <InteractiveHoverButton className="mr-2">Log In</InteractiveHoverButton>
             </a>
 
           </div>
